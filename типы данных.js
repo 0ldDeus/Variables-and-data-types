@@ -16,7 +16,8 @@ console.log(birthYear); // Вывод: 1990
 // const birthYear; // Ошибка: константа постоянная величина и должна быть инициализирована при объявлении
 
 /*Задание 2*/
-
+/*let и const ограничены и доступны только в пределах своего блока.
+var неограничен и доступен вне своего блока*/
 /*Задание3*/
 
 // 1. Создание переменных
@@ -36,11 +37,13 @@ console.log("undef:", undef, "| typeof:", typeof undef);
 console.log("notANumber:", notANumber, "| typeof:", typeof notANumber);
 
 /*Задание №4 */
-
+/*Объявлил и инициализировал переменные let str1 и  let num1*/
 let str1 = "123";
 let num1 = 456;
 
 // Строка → число
+// Объявил переменную strToNum с помощью let и сразу инициализировал её значением, полученным через Number(str1)
+
 let strToNum = Number(str1); // или parseInt(str), parseFloat(str)
 console.log(strToNum);      // 123
 console.log(typeof strToNum); // "number"
@@ -49,6 +52,19 @@ console.log(typeof strToNum); // "number"
 let numToStr = String(num1); // или num.toString()
 console.log(numToStr);      // "456"
 console.log(typeof numToStr); // "string"
+
+// В строку
+String(undefined); // "undefined"
+console.log(String(undefined));
+String(null);      // "null"
+console.log(String(null));
+
+// В число
+Number(undefined); // NaN (не число)
+console.log(Number(undefined));
+Number(null);      // 0
+console.log(Number(null));
+
 
 /*Задание №5*/
 /*Тип переменной определяется во время выполнения, а не при объявлении*/
